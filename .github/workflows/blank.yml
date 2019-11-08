@@ -7,4 +7,4 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-      - run: cat readme.md
+      - run: cat README.md
