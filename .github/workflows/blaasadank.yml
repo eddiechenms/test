@@ -14,4 +14,4 @@ jobs:
     - name: Run a multi-line script
       run: |
          dir
-         echo ${{ hashFiles('**/2.txt') }}
+         echo ${{ hashFiles('test/2.txt') }}
