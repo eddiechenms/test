@@ -1,7 +1,7 @@
 name: test
 on:
   check_suite:
-    types: [requested, rerequested]
+    types: [completed, rerequested]
   pull_request:
     branches: 
       - master
