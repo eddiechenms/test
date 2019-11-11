@@ -13,7 +13,7 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       env:
-        hash: ${{ hashFiles(2.txt) }}
+        hash: ${{ hashFiles('2.txt') }}
       run: |
          echo $PWD
          dir
