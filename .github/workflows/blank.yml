@@ -1,10 +1,10 @@
 name: test
 on:
+  check_suite:
+    types: [requested, rerequested]
   pull_request:
     branches: 
       - master
-  issue_comment:
-    types: [created]
 jobs:
   build:
     runs-on: macOS-latest
