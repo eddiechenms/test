@@ -12,7 +12,9 @@ jobs:
     - name: Run a one-line script
       run: echo Hello, world!
     - name: Run a multi-line script
+      env:
+        hash: ${{ hashFiles(2.txt) }}
       run: |
          echo $PWD
          dir
-         echo "$GITHUB_WORKSPACE"
+         echo "$hash"
