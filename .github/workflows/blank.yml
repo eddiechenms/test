@@ -11,3 +11,13 @@ jobs:
         if: matrix.dv == 'a'
       - run: cat 2.txt
         if: cancelled()
+  test:
+    needs: [build]
+    runs-on: windows-latest
+    steps:
+     - run: echo test
+   
+  test2:
+    runs-on: [ubuntu-latest]
+    steps:
+      - run: echo test2
