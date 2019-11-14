@@ -9,5 +9,5 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
-        if: matrix.dv ==a
+        if: matrix.dv == 'a'
       - run: cat 2.txt
