@@ -11,3 +11,4 @@ jobs:
       - uses: actions/checkout@v1
         if: matrix.dv == 'a'
       - run: cat 2.txt
+        if: cancelled()
