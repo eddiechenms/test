@@ -6,7 +6,7 @@ jobs:
       matrix:
         dv: [a, b]
         cv: [c, d]
-    if: matrix.dv == a && matrix.cv ==d
+    if: ${{ matrix.dv }} == a && ${{ matrix.cv }} ==d
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
