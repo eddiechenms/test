@@ -4,9 +4,8 @@ jobs:
   build:
     strategy:
       matrix:
-        dv: [a, b]
-        cv: [c, d]
-    runs-on: windows-latest
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
         if: matrix.dv == 'a'
