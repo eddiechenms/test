@@ -4,10 +4,10 @@ jobs:
   build:
     strategy:
       matrix:
-        os: ${{ env.dv }}
-    env:
-      dv: '[windows-latest,ubuntu-latest]'
-    runs-on: ${{ matrix.os}}
+        dv: [a, b]
+        cv: [c, d]
+    if: matrix.dv == a && matrix.cv ==d
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
       - run: cat 2.txt
